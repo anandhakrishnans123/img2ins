@@ -2,7 +2,8 @@ name: Run main.py daily
 
 on:
   schedule:
-    - cron: "19 9 * * *"
+    - cron: "32 9 * * *"
+
   # runs daily at 12:47 IST (07:17 UTC)
   workflow_dispatch:      # allows manual trigger from GitHub
 
