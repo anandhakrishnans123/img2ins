@@ -1,9 +1,10 @@
-name: Run main.py daily at 4:50 PM IST
+name: Run main.py at 5 AM and 5 PM IST
 
 on:
   schedule:
-    - cron: "20 11 * * *"   # Runs every day at 11:20 AM UTC (which is 4:50 PM IST)
-  workflow_dispatch:          # Allows manual trigger from GitHub
+    - cron: "30 23 * * *"   # 5:00 AM IST (11:30 PM UTC previous day)
+    - cron: "30 11 * * *"   # 5:00 PM IST (11:30 AM UTC)
+  workflow_dispatch:          # Allows manual trigger
 
 jobs:
   run-script:
