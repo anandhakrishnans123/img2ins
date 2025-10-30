@@ -31,3 +31,6 @@ wheels/
 # Project specific
 downloads/
 recordings/
+*.xlsx
+combined.xlsx
+matched_*.xlsx
