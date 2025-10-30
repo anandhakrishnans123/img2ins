@@ -5,7 +5,10 @@ from google import genai
 import re
 import json
 from pymongo import MongoClient
-uri = "mongodb+srv://myUser:yH89cVer8fkdshDQ@cluster0.ly5onxl.mongodb.net/?appName=Cluster0"
+
+uri = os.getenv("MONGODB_URI")
+if not uri:
+    raise ValueError("Missing MONGODB_URI environment variable")
 client = MongoClient(uri)
 db = client["audio_processing"]
 collection = db["audio_results"]

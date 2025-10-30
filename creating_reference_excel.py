@@ -1,6 +1,7 @@
 import requests
 import json
 import pandas as pd
+import os
 from pymongo import MongoClient
 
 # =====================================================
@@ -8,7 +9,7 @@ from pymongo import MongoClient
 # =====================================================
 
 GRAPHQL_URL = "https://42fd29e5b225.ngrok-free.app/graphql"  # Replace with your actual endpoint
-MONGO_URI = "mongodb+srv://myUser:yH89cVer8fkdshDQ@cluster0.ly5onxl.mongodb.net/?appName=Cluster0"
+MONGO_URI = os.getenv("MONGODB_URI")
 
 # =====================================================
 # FUNCTION DEFINITION
